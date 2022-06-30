@@ -1,2 +1,7 @@
 # -Pixel-Gun-3D-Notes
-Resources for modding pixel gun 3d
+
+If you don't know how to use this, then too bad. I'll update this every week.
+
+
+
+Cleaner and better version of [Pixel-Gun-3D-Resources] (https://github.com/HorridModz/Pixel-Gun-3D-Resources) By HorridModz
