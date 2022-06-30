@@ -1,4 +1,4 @@
-# -Pixel-Gun-3D-Notes
+# Pixel-Gun-3D-Notes
 
 If you don't know how to use this, then too bad. I'll update this every week.
 
