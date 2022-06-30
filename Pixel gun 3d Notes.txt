@@ -1,0 +1,141 @@
+Free bp: PremiumPrice.PGCompany.BattlePass.BattlePass -- mov r0, #0
+bx lr
+
+Free bp levels: LevelPrice.PGCompany.BattlePass.BattlePass -- mov r0, #0
+
+free shopping: Price.ItemPrice (use on loading screen, Min is 50) mov r0, #0x50
+bx lr
+
+Inf Ammo: get_currentAmmoInBackpack & get_currentAmmoInClip.WeaponW - mov r0, #0x64
+bx lr
+
+Anti Self-Kill: KillSelf & SuicideFall & ImSuicide & SuicideFallCoroutine.Player_move_c - mov r0, #0
+bx lr
+
+Pet 1 Hit Kill: get_Attack.PetInfo - movt r0, #0x44fa
+bx lr
+
+Pet Super Speed: get_SpeedModif.PetInfo - movt r0, #0x44fa
+bx lr
+
+Pet Fast Respawn: get_RespawnTime.PetInfo - mov r0, #0
+bx lr
+
+Godmode V1: GetDamageInternal.Player_move_c - mov r0, #0
+bx lr
+
+GodMode V2: IsEnemyTo.PlayerDamageable - mov r0, #0
+bx lr
+
+Godmode V3: (BAN) isImmortality.Player_move_c - mov r0, #1
+bx lr
+
+Inf coins: CoinsRewardBase.Rilisoft.LobbyItemsBundle - movt r0, #0X9C40 
+bx lr
+
+Inf gems: GemsRewardBase.Rilisoft.LobbyItemsBundle - movt r0, #0X9C40 
+bx lr
+
+Lobby item FreeDom: ContentRealPrice.Rilisoft.LobbyItemsBundle - mov r0, #0
+bx lr
+
+No Arena monsters: ZombiesInWave.GlobalGameController - mov r0, #0
+bx lr
+
+Lottery Hack: Count.Rilisoft.GameEventItemData - movt r0, #0xAFC8
+bx lr
+
+Dumb Bots: GetMaxRandomValueForAim.AIBotSettings - movt r0, #0xAFC8
+bx lr
+
+Dumb Bots: GetAttackRange.AIBotSettings - mov r0, #0
+bx lr
+
+Crititcal Hit: AlwaysCriticalHit.EffectsController - mov r0, #1
+bx lr
+
+Antistun: JumpDisabled.EffectsController - mov r0, #0
+bx lr
+
+Double Jump: NinjaJumpEnabled.EffectsController - mov r0, #1
+bx lr
+
+Lifesteal on crit: RecoverHPOnCrit.EffectsController - mov r0, #1
+bx lr
+
+Lifesteal: RecoverHPOnDamage.EffectsController - mov r0, #1
+bx lr
+
+No Spread: ScatterReduction.EffectsController - mov r0, #1
+bx lr
+
+No Self Explosion Damage: SelfExplosionDamageDecreaseCoef.EffectsController - movt r0, #0
+bx lr
+
+Sprint After Kill: SprintAfterKill.EffectsController - mov r0, #1
+bx lr
+
+Stealth (Silent): WeAreStealth.EffectsController - mov r0, #1
+bx lr
+
+XRay: XRayVisionFromModule.EffectsController - mov r0, #1
+bx lr
+
+Clan Never Full: IsFullClan.ClansController - mov r0, #0
+bx lr
+
+Shoot Through Shield: CheckProtectionForDamageable.WeaponChargeShield - mov r0, #0
+bx lr
+
+No Ads: IsPayingUser.MobileAdManager - mov r0, #1
+bx lr
+
+No Auto Shoot Delay: AutoShootDelay & AutoShootStartDelay.Player_move_c - movt r0, #0
+bx lr
+
+Always win: countKillsCommandBlue.Player_move_c - movt r0, #0x44fa
+bx lr
+
+Always Go: isGo.Player_move_c - mov r0, #1
+bx lr
+
+On Ladder (Hover/Fly?): OnLadder.Player_move_c - mov r0, #1
+bx lr
+
+rocket NoClip: GetRocketCollisionByRaycast.Rocket - mov r0, #0
+bx lr
+
+Unlock all skins: IsSkinBought & IsSkinBought & IsSkinWithStoreKitIdBought.SkinsController - mov r0, #1
+bx lr
+
+Free bp: PremiumPrice.PGCompany.BattlePass.BattlePass - mov r0, #1
+bx lr
+
+Shoot Shotgun Bullets: isShotGun & CheckPlayDefaultAnimInMulti.weaponSounds - mov r1, #1 -- Value
+strb r1, [r0, #0x14a] - Offset
+bx lr
+
+Invisible: isInvisibleSelf & isVisibleNetwork.Player_move_c - mov r1, #1 -- value
+mov r2, #0 -- value
+strb r1, [r0, #0x2D2] -- OffSet
+strb r2, [r0, #0x2CF] -- Offset
+bx lr
+
+Op Mushroom: mushroomRadius & mushroomBurnTime & mushroomBurnDamage.Player_move_c - movw r1, #0x447a -- Value
+movw r2, #0x43FA -- Value
+movw r3, #0x4348 -- Value
+strb r1, [r0, #0x6E4] -- OffSet
+strb r2, [r0, #0x6E8] -- OffSet
+strb r3, [r0, #0x6F0] -- OffSet
+bx lr
+
+Slient Aim: flamethrower & range & radiusRoundMelee.WeaponSounds - mov r1, #0x1 -- Value
+movw r2, #0x447a -- Value
+movw r3, #0x447a -- Value
+strb r1, [r0, #0x270] -- OffSet
+strb r2, [r0, #0x428] -- OffSet
+strb r3, [r0, #0xF4] -- OffSet
+bx lr
+
+real fireRate: Shotpressed & _shot - b #0x4160
+bx lr
